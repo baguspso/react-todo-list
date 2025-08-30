@@ -10,6 +10,12 @@ function ToDoList() {
         console.log(task);
         setTask(event.target.value);
     }
+    
+    const handleEnter = (event) => {
+        if (event.key === "Enter") {
+            addTask();
+        }
+    }
 
     function addTask() {
         if (!task) {
@@ -55,7 +61,7 @@ function ToDoList() {
     return(
         <div className="main-container">
             <h3 className="title">TODO LIST</h3>
-            <input type='text' className='task-input' value={task} maxLength={"35"} placeholder='Enter a task...' onChange={handleInputChange} />
+            <input type='text' className='task-input' value={task} maxLength={"35"} placeholder='Enter a task...' onChange={handleInputChange} onKeyDown={handleEnter} />
             <button className='add-button' onClick={addTask}>ADD</button>
             <div className='list-container'>
                 <ol>
