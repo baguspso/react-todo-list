@@ -1,0 +1,134 @@
+:root {
+    --main-font: Verdana, Tahoma, sans-serif;
+    --main-bg: hsl(0, 0%, 15%);
+    --color1: hsl(0, 0%, 100%);
+    --color2: hsl(155, 100%, 45%);
+    --color3: hsl(0, 0%, 10%);
+    --color4: hsl(200, 100%, 45%);
+    --color5: hsl(200, 100%, 55%);
+    --color6: hsl(15, 100%, 40%);
+    --color7: hsl(15, 100%, 50%);
+    --color8: hsl(155, 100%, 55%);
+}
+
+.main-container * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-container {
+    margin: 0px;
+    padding: 20px;
+    min-height: 600px;
+    width: 600px;
+    background-color: var(--main-bg);
+    border-radius: 20px;
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+}
+
+.title {
+    padding-bottom: 20px;
+    font-family: var(--main-font);
+    font-size: 2em;
+    color: var(--color2);
+    text-align: center;
+}
+
+.task-input {
+    padding: 0px 90px 0px 10px;
+    height: 40px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    font-family: var(--main-font);
+    font-size: 1.3em;
+    color: var(--color3);
+}
+
+.task-input:focus {
+    outline: none;
+}
+
+.add-button {
+    right: 20px;
+    height: 40px;
+    width: 80px;
+    background-color: var(--color4);
+    border: none;
+    border-radius: 10px;
+    font-family: var(--main-font);
+    font-size: 1.3em;
+    font-weight: bold;
+    color: var(--color1);
+    position: absolute;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.add-button:hover {
+        background-color: var(--color5);
+}
+
+.list-container {
+    margin-top: 40px;
+    width: 100%;
+}
+
+.list-container li {
+    margin: 20px 0px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.list-container span {
+    background-color: var(--color2);
+    border: none;
+    border-radius: 10px;
+    font-family: var(--main-font);
+    font-size: 1.2em;
+    color: var(--main-bg);
+    list-style-type: none;
+    align-content: center;
+    text-align: center;
+    flex: 1;
+    cursor: pointer;
+    transition: background-colo 0.2s ease;
+}
+
+.list-container span:hover {
+    background-color: var(--color8);
+}
+
+.list-container button {
+    height: 30px;
+    width: 30px;
+    background-color: var(--color4);
+    border: none;
+    border-radius: 50%;
+    font-family: var(--main-font);
+    font-weight: bold;
+    color: var(--color1);
+    align-self: center;
+    align-content: center;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2ms ease;
+}
+
+.list-container button:hover {
+    background-color: var(--color5);
+}
+
+#delete-button {
+    background-color: var(--color6);
+    transition: background-color 0.2ms ease;
+}
+
+#delete-button:hover {
+    background-color: var(--color7);
+}
