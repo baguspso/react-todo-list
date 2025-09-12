@@ -1,0 +1,1 @@
+![Screenshot image](./public/screenshots/todo-list-screenshot.png)
